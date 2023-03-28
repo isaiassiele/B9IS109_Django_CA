@@ -19,6 +19,12 @@
       {
         "duplicate-id-active": "off"
       }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
     ]
   }
 }
