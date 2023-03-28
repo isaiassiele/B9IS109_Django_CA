@@ -5,19 +5,12 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <div class="card mt-5">
-            
-            
             <div class="card-body">
                 <div class="card-title py-3">
                     <h4> Register for a free account</h4>
                 </div>
-
-        
-
                 <form action="" method="post">
-
                     {% csrf_token %}
-                    
                     {% include 'partial/messages.html' %}
                     <div class="form-group py-1">
                         <input type="text" 
@@ -25,11 +18,12 @@
                         id="usernameField" 
                         class="form-control form-control-sm" 
                         placeholder="username" 
-                        aria-describedby="helpId"/>   
+                        aria-describedby="helpId"
+                        value="{{fieldValues.username}}"
+                        />   
                     </div>
                     <div class="invalid_feedback invalid-feedback" style="display:none">
                         <p></p>
-
                     </div>
                     <p class="text-sm text-success usernameSuccessOutput"></p>
   
@@ -39,7 +33,9 @@
                         id="emailField" 
                         class="form-control form-control-sm" 
                         placeholder="Email" 
-                        aria-describedby="helpId"/>
+                        aria-describedby="helpId"
+                        value="{{fieldValues.email}}"
+                        />
                         
                     </div>
                     <div class="emailFeedBackArea invalid-feedback" style="display:none">
@@ -54,7 +50,7 @@
                         aria-describedby="helpId"/>
                         <small class="float-right py-3 showPasswordToggle">SHOW</small>
                     </div>
-                    <input type="submit" value="register" class="btn btn-block btn-primary" />
+                    <input type="submit" value="register" class="btn btn-block btn-primary submit-btn" />
 
                 </form>
 
